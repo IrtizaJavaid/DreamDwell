@@ -1,0 +1,123 @@
+<%layout('layouts/boilerplate')-%>
+<div class="row mt-4">
+  <div class="col-8 offset-2">
+    <h3 style="color: rgb(128, 57, 57)">Edit Listing</h3>
+
+    <form
+      class="needs-validation"
+      novalidate
+      method="POST"
+      action="/listings/<%= newUpdatedList._id %>?_method=PUT"
+      enctype="multipart/form-data"
+    >
+      <div class="mb-3">
+        <label for="title" class="form-label">Title:</label>
+        <input
+          type="text"
+          id="title"
+          name="listing[title]"
+          value="<%= newUpdatedList.title %>"
+          required
+          class="form-control"
+        />
+        <div class="valid-feedback">Title Looks Good!</div>
+        <div class="invalid-feedback">Title should be added</div>
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Description:</label>
+        <textarea
+          id="description"
+          class="form-control"
+          name="listing[description]"
+          required
+        >
+<%= newUpdatedList.description %></textarea
+        >
+        <div class="valid-feedback">Description Looks Good!</div>
+        <div class="invalid-feedback">Description should be added</div>
+      </div>
+
+      <div class="mb-3">
+        <h6>Orignal Image</h6>
+        <img src="<%=orignalImage%>" alt="" />
+      </div>
+
+      <div class="mb-3">
+        <label for="imageUrl" class="form-label">Upload New Image</label>
+        <input
+          type="file"
+          id="imageUrl"
+          name="listing[imageUrl]"
+          class="form-control"
+          required
+        />
+      </div>
+
+      <div class="row">
+        <div class="mb-3 col-md-4">
+          <label for="price" class="form-label">Price:</label>
+          <input
+            type="number"
+            id="price"
+            name="listing[price]"
+            class="form-control"
+            value="<%= newUpdatedList.price %>"
+            required
+          />
+          <div class="valid-feedback">Price Added!</div>
+          <div class="invalid-feedback">Price should be valid</div>
+        </div>
+        <div class="mb-3 col-md-8">
+          <label for="country" class="form-label">Country:</label>
+          <input
+            type="text"
+            id="country"
+            name="listing[country]"
+            class="form-control"
+            value="<%= newUpdatedList.country %>"
+            required
+          />
+          <div class="valid-feedback">Country added</div>
+          <div class="invalid-feedback">Please Enter Country name</div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="location" class="form-label">Location:</label>
+        <input
+          type="text"
+          id="location"
+          name="listing[location]"
+          class="form-control"
+          value="<%= newUpdatedList.location %>"
+          required
+        />
+        <div class="valid-feedback">Location added</div>
+        <div class="invalid-feedback">Please Enter Location name</div>
+      </div>
+
+      <!-- Category Dropdown -->
+      <div class="mb-3">
+        <label for="category" class="form-label">Category</label>
+        <select
+          name="listing[category]"
+          id="category"
+          class="form-control"
+          required
+        >
+          <option value="mountain">Mountain</option>
+          <option value="arctic">Arctic</option>
+          <option value="castle">Castle</option>
+          <option value="camp">Camp</option>
+          <option value="beach">Beach</option>
+          <option value="iconic-cities">Iconic Cities</option>
+          <option value="rooms">Rooms</option>
+          <option value="trending">Trending</option>
+        </select>
+        <div class="invalid-feedback">Category is required</div>
+      </div>
+
+      <button type="submit" class="btn btn-dark mb-3 add-btn">Update</button>
+    </form>
+  </div>
+</div>

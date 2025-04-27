@@ -1,0 +1,81 @@
+<style>
+  table tbody tr:hover {
+    background-color: #f8f9fa;
+  }
+</style>
+<%layout('layouts/boilerplate')-%>
+<body>
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">Your Booking Requests</h2>
+
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <table class="table table-responsive table-hover table-bordered">
+          <thead class="thead-dark">
+            <tr class="bg-primary text-white text-center">
+              <th>Listing</th>
+              <th>User</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% if (bookings.length === 0) { %>
+            <tr>
+              <td colspan="4" class="text-center text-muted">
+                No bookings found
+              </td>
+            </tr>
+            <% } else { %> <% bookings.forEach(booking => { %>
+            <tr class="align-middle">
+              <td class="text-center">
+                <%= booking.listing ? booking.listing.title : "Listing not available" %>
+              </td>
+              <td class="text-center">
+                <%= booking.user ? booking.user.email : "User not available" %>
+              </td>
+              <td class="text-center">
+                <% if (booking.status === 'pending') { %>
+                <span class="badge bg-warning text-dark">Pending</span>
+                <% } else if (booking.status === 'approved') { %>
+                <span class="badge bg-success">Approved</span>
+                <% } else if (booking.status === 'rejected') { %>
+                <span class="badge bg-danger">Rejected</span>
+                <% } %>
+              </td>
+              <td class="text-center">
+                <form
+                  action="/bookings/<%= booking._id %>/approve"
+                  method="POST"
+                  style="display: inline-block"
+                >
+                  <button
+                    type="submit"
+                    class="btn btn-outline-success btn-sm"
+                    onclick="return confirm('Are you sure you want to approve this booking?')"
+                  >
+                    Approve
+                  </button>
+                </form>
+                <form
+                  action="/bookings/<%= booking._id %>/reject"
+                  method="POST"
+                  style="display: inline-block"
+                >
+                  <button
+                    type="submit"
+                    class="btn btn-outline-danger btn-sm"
+                    onclick="return confirm('Are you sure you want to reject this booking?')"
+                  >
+                    Reject
+                  </button>
+                </form>
+              </td>
+            </tr>
+            <% }) %> <% } %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>

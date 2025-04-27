@@ -1,0 +1,151 @@
+<style>
+  /* General Search Bar Styling for All Devices */
+  .searchbar {
+    margin: 0 auto; /* Center the search bar */
+    width: 50%; /* Set a reasonable width */
+  }
+
+  .searchbar button {
+    border-radius: 25px;
+    background-color: #ffc107 !important;
+    padding: 0 1rem 0 1rem;
+  }
+
+  .searchbar button i {
+    display: inline;
+    margin-right: 0.5rem;
+  }
+  .searchbar button:hover {
+    background-color: #ffc107 !important;
+  }
+  .searchbar input {
+    border-radius: 25px;
+    padding: 0.5rem 3rem 0.5rem 3rem;
+    /* font-size: 0.8rem; */
+  }
+
+  /* Navbar Links */
+  .navbar-nav {
+    flex-direction: row; /* Keep "Explore" in a single row */
+  }
+
+  .nav-link {
+    padding: 0.5rem 0.8rem; /* Spacing for better usability */
+    font-size: 1rem; /* Standardize font size */
+  }
+  /* Medium Screens (Tablets and Small Laptops) */
+  @media (max-width: 1024px) {
+    .searchbar {
+      width: 70%; /* Wider for tablets */
+      margin: 0 auto; /* Keep centered */
+    }
+
+    .searchbar input {
+      padding: 0.5rem 1rem; /* Adjust padding for smaller screens */
+    }
+  }
+
+  /* Small Devices (Mobile Phones) */
+  @media (max-width: 768px) {
+    .searchbar {
+      margin: 0 auto; /* Center the search bar */
+      width: 100%; /* Set a reasonable width */
+    }
+
+    .searchbar button {
+      border-radius: 25px;
+      background-color: #ffc107 !important;
+      padding: 0 1rem 0 1rem;
+    }
+
+    .searchbar button i {
+      display: inline;
+      margin-right: 0.5rem;
+    }
+    .searchbar button:hover {
+      background-color: #ffc107 !important;
+    }
+    .searchbar input {
+      border-radius: 25px;
+      padding: 0.5rem 3rem 0.5rem 3rem;
+      /* font-size: 0.8rem; */
+    }
+
+    /* Collapsible Navbar Links */
+    .navbar-nav.ms-auto {
+      flex-direction: column; /* Stack login/logout links vertically */
+      margin-top: 1rem; /* Add space between links */
+    }
+
+    .nav-link {
+      text-align: center; /* Center-align text */
+      padding: 0.8rem;
+    }
+  }
+</style>
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+  <div class="container-fluid">
+    <!-- Brand Logo -->
+    <a class="navbar-brand" href="/listings">
+      <i class="fa-regular fa-compass"></i>
+    </a>
+
+    <!-- Always Visible "Explore" -->
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/listings">Explore</a>
+      </li>
+    </ul>
+
+    <!-- Toggle Button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible Section for Search Bar and Login/Logout -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- Search Bar -->
+      <div class="navbar-nav mx-auto searchbar">
+        <form class="d-flex" id="searchForm">
+          <input
+            class="form-control me-2"
+            type="text"
+            id="searchQuery"
+            placeholder="Search by title or location"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>&nbsp;Search
+          </button>
+        </form>
+      </div>
+
+      <!-- Login/Logout Options -->
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/listings/new">DreamDwell your home</a>
+        </li>
+        <% if (!currentUser) { %>
+        <li class="nav-item">
+          <a class="nav-link" href="/signup"><b>Sign Up</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/login"><b>Log In</b></a>
+        </li>
+        <% } %> <% if (currentUser) { %>
+        <li class="nav-item">
+          <a class="nav-link" href="/logout">Log out</a>
+        </li>
+        <% } %>
+      </ul>
+    </div>
+  </div>
+</nav>

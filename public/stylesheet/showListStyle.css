@@ -1,0 +1,177 @@
+/* body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding:15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h3 {
+    margin-top: 0;
+    font-size: 2em;
+    color: #333;
+}
+
+.listing-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 8px 0;
+}
+
+.listing-description {
+    font-size: 1.2em;
+    color: #666;
+    margin: 20px 0;
+}
+
+.listing-price {
+    font-size: 1.4em;
+    color: #4CAF50;
+    margin: 10px 0;
+}
+
+.listing-location {
+    font-size: 1.2em;
+    color: #777;
+    margin: 10px 0;
+}
+
+.navigation-links {
+    margin-bottom: 20px;
+  }
+  
+  .back-link {
+    margin-right: 10px;
+    color: #007bff;
+    text-decoration: none !important;
+  }
+  
+  .back-link:hover {
+    text-decoration: underline;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+} */
+
+
+/* Body Styling */
+body {
+    font-family: 'Roboto', sans-serif; /* Clean and modern font */
+    background-color: #F7F7F7; /* Light gray background for subtle elegance */
+    margin: 0;
+    padding: 20px;
+}
+
+/* Container Styling */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: #FFFFFF; /* White background for contrast */
+    border-radius: 10px; /* Smooth corners for a polished look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center;
+}
+
+/* Heading Styling */
+h3 {
+    margin-top: 0;
+    font-size: 2rem;
+    color: #006D77; /* Deep teal for consistency with theme */
+    font-weight: 600; /* Slightly bold for emphasis */
+}
+
+/* Listing Image Styling */
+.listing-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 8px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Depth for the images */
+}
+
+/* Listing Description */
+.listing-description {
+    font-size: 1.2rem;
+    color: #555555; /* Neutral gray for readability */
+    margin: 20px 0;
+}
+
+/* Listing Price Styling */
+.listing-price {
+    font-size: 1.4rem;
+    color: #FFC107; /* Gold to highlight the price */
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Listing Location Styling */
+.listing-location {
+    font-size: 1.2rem;
+    color: #777777; /* Muted gray for subtle emphasis */
+    margin: 10px 0;
+}
+
+/* Navigation Links */
+.navigation-links {
+    margin-bottom: 20px;
+}
+
+.back-link {
+    margin-right: 10px;
+    color: #006D77; /* Deep teal for link color */
+    text-decoration: none !important;
+    font-weight: 600; /* Slightly bold */
+}
+
+.back-link:hover {
+    text-decoration: underline; /* Subtle underline on hover */
+    color: #FFC107; /* Gold for hover state */
+}
+
+/* Submit Button Styling */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #006D77; /* Deep teal for primary button */
+    border: none;
+    border-radius: 8px; /* Modern rounded corners */
+    color: #FFFFFF; /* White text for contrast */
+    font-size: 1.2rem;
+    font-weight: 600; /* Slightly bold for emphasis */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+}
+
+button[type="submit"]:hover {
+    background-color: #FFC107; /* Gold hover effect for standout action */
+    transform: scale(1.05); /* Subtle enlargement on hover */
+}
+
+button[type="submit"]:active {
+    background-color: #E6A700; /* Slightly darker gold for active state */
+    transform: scale(0.98); /* Shrink effect on click */
+}

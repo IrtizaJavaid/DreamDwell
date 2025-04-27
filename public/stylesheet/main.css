@@ -1,0 +1,366 @@
+
+
+body {
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: "Plus Jakarta Sans", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}   
+.main_container{
+    flex: 1;
+}
+/* Navbar Styling */
+.navbar {
+    height: 5rem;
+    background-color: rgba(0, 109, 119, 0.9); /* Deep teal with slight transparency */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Icon Styling */
+.fa-compass {
+    color: #FFC107; /* Rich Gold for a premium feel */
+    font-size: 2rem;
+}
+
+/* Navbar Links */
+.nav-link {
+    color: #FFFFFF; /* White for high contrast */
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effect for Navbar Links */
+.nav-link:hover {
+    color: #FFC107; /* Rich Gold for hover effect */
+}
+
+/* Title Styling */
+.title {
+    font-family: 'Poppins', sans-serif; /* Sleek and modern font */
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #333333; /* Dark Gray for readability */
+    margin-bottom: 20px;
+}
+
+/* Body Background */
+body {
+    margin: 0;
+    padding: 0;
+    background: #F7F7F7; /* Soft Light Gray for a clean look */
+    font-family: 'Roboto', sans-serif; /* Professional and approachable font */
+}
+
+
+.listings {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.listings li {
+    margin: 10px 0; /* Add consistent spacing between items */
+}
+
+/* Listing Link Styling */
+.listing-link {
+    text-decoration: none; /* Clean, no underline */
+    color: #006D77; /* Deep teal for professional and consistent branding */
+    font-size: 1.2rem;
+    font-weight: 500; /* Slightly bold for emphasis */
+    transition: color 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.listing-link:hover {
+    color: #FFC107; /* Rich Gold for hover effect to grab attention */
+}
+
+/* Create Button Styling */
+.create-button {
+    background-color: #006D77; /* Deep Teal for professional look */
+    color: #FFFFFF; /* White text for readability */
+    border: none; /* Clean borderless design */
+    padding: 10px 20px; /* Comfortable padding */
+    border-radius: 5px; /* Rounded corners for a modern feel */
+    cursor: pointer; /* Pointer for clickable effect */
+    font-size: 1rem; /* Ensure button text is readable */
+    font-weight: 600; /* Slightly bold for emphasis */
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out; /* Smooth hover and click effects */
+}
+
+.create-button:hover {
+    background-color: #FFC107; /* Gold for hover effect */
+    color: #333333; /* Dark text for contrast during hover */
+    transform: scale(1.05); /* Subtle enlarge effect on hover */
+}
+
+.create-button:active {
+    background-color: #E6A700; /* Slightly darker gold for active (pressed) state */
+    transform: scale(0.98); /* Slight shrink effect for click feedback */
+}
+
+/* footer styling */
+.f-info {
+    /* background-color: #343a40; */
+    color:#006D77;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative; /* Changed from fixed to relative */
+    width: 100%;
+    background-color:rgb(250, 250, 250); /* Uncommented for better visibility */
+}
+
+.f-info-social {
+    color: #343a40 !important;
+    font-size: 1.5rem;
+    margin: 0 10px; /* Added margin for spacing */
+
+}
+
+.f-info a {
+    color: #006D77;
+    text-decoration: none;
+    margin: 0 10px; /* Added margin for spacing */
+}
+
+.f-info a:hover {
+    color:  #FFC107;
+    text-decoration: underline;
+}
+
+/* Ensure main content has bottom margin to avoid overlap with footer */
+.main-content {
+    margin-bottom: 3rem; /* Adjust as needed */
+}
+/* cards styling */
+.card{
+    border:none;
+    margin-bottom: 2rem;
+}
+.card-img-top{
+    border-radius: 1rem;
+    width: 100%;
+    object-fit: cover;
+}
+.card-body{
+    padding:0;
+}
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+}
+
+/* Add Button Styling */
+.add-btn {
+    background-color: #006D77; /* Deep teal for a professional and modern look */
+    color: #FFFFFF; /* White text for contrast */
+    border: none; /* Clean button design */
+    width: 30%; /* Button width */
+    position: relative;
+    left: 35%; /* Centered horizontally */
+    height: 2.5rem; /* Height for balance */
+    font-size: 1rem; /* Standard button text size */
+    font-weight: 600; /* Slightly bold text for emphasis */
+    border-radius: 8px; /* Rounded corners for a modern feel */
+    cursor: pointer; /* Pointer effect to show interactivity */
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out; /* Smooth hover and click effects */
+}
+
+.add-btn:hover {
+    background-color: #FFC107; /* Gold for a standout hover effect */
+    color: #333333; /* Dark text to contrast gold */
+    transform: scale(1.05); /* Slight enlargement for hover interaction */
+}
+
+.add-btn:active {
+    background-color: #E6A700; /* Slightly darker gold for active state */
+    transform: scale(0.98); /* Slight shrink for click feedback */
+}
+
+/* Label Styling */
+label {
+    color: #006D77; /* Deep teal for alignment with the theme */
+    font-weight: 600; /* Make the label text bolder */
+    font-size: 1.1rem; /* Slightly larger for readability */
+    margin-bottom: 0.5rem; /* Add space below the label */
+    display: block; /* Ensure labels are on their own line */
+    font-family: 'Roboto', sans-serif; /* Professional and clean font */
+}
+
+/* Show Card Container */
+.show-card {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Image Styling */
+.show-img {
+    height: 50vh; /* Maintain consistent height */
+    border-radius: 10px; /* Smooth edges for a modern look */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Buttons Container */
+.btnss {
+    display: flex;
+    justify-content: center; /* Center align buttons */
+    gap: 1rem; /* Add spacing between buttons */
+}
+
+/* General Button Styling */
+.btn {
+    background-color: #006D77 !important; /* Deep teal for default button */
+    color: #FFFFFF !important; /* White text for high contrast */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600; /* Slightly bold text for emphasis */
+    border-radius: 8px; /* Rounded corners for a clean design */
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out; /* Smooth transitions */
+}
+
+/* Back Button Hover Effect */
+.back-btn:hover {
+    background-color: #FFC107 !important; /* Gold on hover */
+    color: #333333 !important; /* Dark text for readability */
+    transform: scale(1.05); /* Subtle enlargement for hover feedback */
+}
+
+/* Edit Button Hover Effect */
+.edit-btn:hover {
+    background-color: #FFC107 !important; /* Gold for consistency */
+    color: #333333 !important;
+    transform: scale(1.05); /* Interaction feedback */
+}
+
+/* Delete Button Hover Effect */
+.del-btn:hover {
+    background-color: #E60023 !important; /* Subtle red for delete action */
+    color: #FFFFFF !important; /* White text for clarity */
+    transform: scale(1.05); /* Hover interaction */
+}
+
+.row {
+  margin: 0;
+  padding: 0;
+}
+#map {
+  width: 100%;
+}
+
+/* General Mobile Styles (Small Devices) */
+@media (max-width: 768px) {
+    /* Adjust Navbar */
+    .navbar {
+      flex-direction: column; /* Stack items vertically */
+      align-items: flex-start;
+      padding: 1rem;
+      height: auto; /* Allow height to adjust based on content */
+    }
+  
+    .nav-link {
+      font-size: 1rem; /* Slightly smaller font */
+      margin-bottom: 0.5rem; /* Add spacing between links */
+    }
+  
+    /* Adjust Title Size */
+    .title {
+      font-size: 2rem; /* Smaller title for small screens */
+      text-align: center;
+    }
+  
+    /* Listings */
+    .listings li {
+      font-size: 1rem; /* Reduce font size */
+    }
+  
+    /* Adjust Buttons */
+    .btn, .create-button, .add-btn {
+      width: 100%; /* Full width buttons */
+      font-size: 1rem; /* Uniform button size */
+      padding: 0.6rem 0.8rem;
+    }
+  
+    .add-btn {
+      left: 0; /* Center alignment */
+      margin: 0 auto;
+    }
+  
+    /* Form Labels */
+    label {
+      font-size: 1rem; /* Reduce label font size */
+    }
+  
+    /* Image Styling */
+    .show-img {
+      height: 40vh; /* Scale down images for smaller devices */
+    }
+  
+    /* Footer */
+    .f-info {
+      font-size: 0.9rem; /* Smaller text for footer */
+      padding: 1rem;
+    }
+  }
+  
+  /* Tablet Styles (Medium Devices) */
+  @media (max-width: 1024px) {
+    /* Navbar */
+    .navbar {
+      padding: 0.5rem 1.5rem; /* Adjust padding */
+    }
+  
+    .nav-link {
+      font-size: 1.1rem; /* Adjust font size slightly */
+    }
+  
+    /* Adjust Content Spacing */
+    .listings li {
+      margin: 8px 0;
+      font-size: 1.1rem; /* Slightly smaller for tablets */
+    }
+  
+    /* Buttons */
+    .btn, .create-button, .add-btn {
+      padding: 0.8rem 1.2rem; /* Comfortable padding */
+      font-size: 1rem; /* Uniform font size */
+    }
+  
+    /* Cards */
+    .card-img-top {
+      height: 50vw; /* Adjust card height */
+    }
+  }
+  
+  /* Large Screens (Desktops) */
+  @media (min-width: 1200px) {
+    /* Navbar */
+    .navbar {
+      padding: 0 3rem; /* Add more padding for widescreens */
+    }
+  
+    /* Listings */
+    .listings li {
+      font-size: 1.3rem; /* Larger font for desktops */
+    }
+  
+    /* Footer */
+    .f-info {
+      font-size: 1rem; /* Uniform footer size */
+    }
+  }
+  

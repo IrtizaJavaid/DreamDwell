@@ -1,0 +1,194 @@
+<style>
+  :root {
+    --deep-teal: #006d77; /* Deep teal */
+    --rich-gold: #ffc107; /* Rich gold */
+    --dark-gold: #e6a700; /* Slightly darker gold */
+    --light-gray: #f7f7f7; /* Light gray background */
+    --dark-gray: #333333; /* Dark gray for readability */
+    --white: #ffffff; /* White */
+    --footer-gray: #343a40; /* Subtle gray for borders */
+  }
+
+  body {
+    font-family: "Plus Jakarta Sans", serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: var(--light-gray); /* Light gray background */
+  }
+
+  .about-us-container {
+    padding: 2rem;
+    background-color: var(--light-gray); /* Light gray for container */
+  }
+
+  .hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+    background: var(--light-gray); /* Light gray for section */
+    border-bottom: 1px solid var(--footer-gray); /* Subtle gray border */
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--deep-teal); /* Deep teal for emphasis */
+  }
+
+  .hero-image img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .core-values,
+  .team-section,
+  .cta-section {
+    text-align: center;
+    padding: 2rem 0;
+  }
+
+  .values-grid,
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .value-card,
+  .team-member {
+    border: 1px solid var(--footer-gray); /* Subtle gray border */
+    padding: 1rem;
+    border-radius: 10px;
+    background: var(--white); /* White background for cards */
+  }
+
+  .value-card i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--deep-teal); /* Deep teal for icons */
+  }
+
+  .team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+
+  .cta-section {
+    background: var(--deep-teal); /* Deep teal for call-to-action */
+    color: var(--white); /* White text for contrast */
+    padding: 2rem;
+    border-radius: 10px;
+  }
+
+  .cta-section .cta-button {
+    background: var(--white); /* White button */
+    color: var(--deep-teal); /* Teal text for button */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .cta-section .cta-button:hover {
+    background: var(--rich-gold); /* Gold on hover */
+    color: var(--dark-gray); /* Dark gray text for contrast */
+  }
+</style>
+<%layout("/layouts/boilerplate.ejs")-%>
+<body>
+  <main class="about-us-container">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-text">
+        <h1>Welcome to DreamDwell</h1>
+        <p>
+          Your home away from home. Whether you're seeking a cozy getaway or
+          looking to rent your dream space, DreamDwell offers tailor-made
+          experiences for everyone.
+        </p>
+      </div>
+      <div class="hero-image">
+        <img src="\images\logoDreamDwell.png" alt="DreamDwell Hero" />
+      </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="core-values">
+      <h2>Our Mission</h2>
+      <p>
+        At DreamDwell, our mission is to make finding the perfect place to stay
+        or rent as easy and seamless as possible. From short-term stays in your
+        favorite city to renting properties, we provide options that make every
+        dream dwelling a reality.
+      </p>
+      <div class="values-grid">
+        <div class="value-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h3>Choose Your Location</h3>
+          <p>
+            Browse from countless locations to find the perfect spot for your
+            next adventure or business trip.
+          </p>
+        </div>
+        <div class="value-card">
+          <i class="fas fa-key"></i>
+          <h3>Rent Effortlessly</h3>
+          <p>
+            Be it a cozy apartment or luxury villa, we provide an effortless
+            renting experience tailored to your needs.
+          </p>
+        </div>
+        <div class="value-card">
+          <i class="fas fa-users"></i>
+          <h3>Community First</h3>
+          <p>
+            We believe in creating spaces that bring people together and foster
+            lasting connections.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+      <h2>Meet Our Team</h2>
+      <p>
+        DreamDwell is powered by a passionate team of innovators, dreamers, and
+        doers working to redefine the way you find your perfect space.
+      </p>
+      <div class="team-grid">
+        <div class="team-member">
+          <img src="\images\uifaces-human-image (1).jpg" alt="Team Member 1" />
+          <h3>Jane Doe</h3>
+          <p>Founder & CEO</p>
+        </div>
+        <div class="team-member">
+          <img src="/images/uifaces-human-image.jpg" alt="Team Member 2" />
+          <h3>John Smith</h3>
+          <p>Head of Operations</p>
+        </div>
+        <div class="team-member">
+          <img src="/images/uifaces-popular-image.jpg" alt="Team Member 3" />
+          <h3>Emily Brown</h3>
+          <p>Marketing Guru</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+      <h2>Start Your Journey with DreamDwell</h2>
+      <p>
+        Ready to find the perfect place to stay or rent? Explore our listings
+        today and turn your dreams into reality.
+      </p>
+      <a href="/listings" class="cta-button">Explore Listings</a>
+    </section>
+  </main>
+</body>

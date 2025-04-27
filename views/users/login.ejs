@@ -1,0 +1,34 @@
+<style></style>
+<% layout('layouts/boilerplate')-%>
+<div class="row mt-4">
+  <div class="col-6 offset-2">
+    <h1>Log In</h1>
+  </div>
+  <div class="col-6 offset-2 mt-4">
+    <form action="/login" method="post" class="needs-validation" novalidate>
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          class="form-control"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          class="form-control"
+          required
+        />
+      </div>
+
+      <button class="btn btn-success">Login</button>
+    </form>
+  </div>
+</div>

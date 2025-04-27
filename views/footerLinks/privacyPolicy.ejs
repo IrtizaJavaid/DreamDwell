@@ -1,0 +1,141 @@
+<style>
+  :root {
+    --deep-teal: #006d77; /* Deep teal */
+    --rich-gold: #ffc107; /* Rich gold for hover effects */
+    --dark-gold: #e6a700; /* Slightly darker gold */
+    --light-gray: #f7f7f7; /* Light gray for background */
+    --dark-gray: #333333; /* Dark gray for text */
+    --white: #ffffff; /* Standard white */
+    --footer-gray: #343a40; /* Subtle footer gray */
+  }
+
+  body {
+    font-family: "Plus Jakarta Sans", serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: var(--light-gray); /* Light gray background */
+  }
+
+  .policy-container {
+    padding: 2rem;
+    background-color: var(--light-gray); /* Use light gray for container */
+  }
+
+  .policy-header {
+    text-align: center;
+    background: var(--deep-teal); /* Use deep teal for header */
+    color: var(--white); /* Use white text */
+    padding: 2rem;
+    border-radius: 8px;
+  }
+
+  .policy-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .policy-header p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+  }
+
+  .policy-content {
+    padding: 2rem 0;
+  }
+
+  .policy-content h2 {
+    color: var(--deep-teal); /* Deep teal for subheadings */
+    margin-top: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .policy-content ul {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+    list-style: disc;
+  }
+
+  .policy-content ul li {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  .policy-content p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: var(--dark-gray); /* Dark gray for readability */
+  }
+
+  .policy-content a {
+    color: var(--deep-teal); /* Teal for links */
+    text-decoration: none;
+  }
+
+  .policy-content a:hover {
+    color: var(--rich-gold); /* Gold for hover effect */
+    text-decoration: underline;
+  }
+</style>
+<%layout("/layouts/boilerplate.ejs")-%>
+<body>
+  <main class="policy-container">
+    <section class="policy-header">
+      <h1>Privacy Policy</h1>
+      <p>
+        Your privacy is important to us. At DreamDwell, we are committed to
+        protecting your personal information and ensuring transparency in how we
+        collect, use, and safeguard your data.
+      </p>
+    </section>
+
+    <section class="policy-content">
+      <h2>What Information We Collect</h2>
+      <ul>
+        <li>
+          Personal information, such as your name, email address, and contact
+          details, when you sign up or interact with our services.
+        </li>
+        <li>
+          Location data to tailor property listings based on your preferences.
+        </li>
+        <li>
+          Technical data like IP address, browser type, and device information
+          for improving user experience.
+        </li>
+      </ul>
+
+      <h2>How We Use Your Information</h2>
+      <ul>
+        <li>
+          To provide and personalize our services, such as recommending relevant
+          listings.
+        </li>
+        <li>To communicate with you about updates, offers, or promotions.</li>
+        <li>To maintain the security and integrity of our platform.</li>
+      </ul>
+
+      <h2>Your Rights</h2>
+      <p>
+        You have the right to access, modify, or delete your personal
+        information at any time. For assistance, please contact us at
+        <a href="mailto:support@dreamdwell.com">support@dreamdwell.com</a>.
+      </p>
+
+      <h2>Data Security</h2>
+      <p>
+        We use industry-standard measures to protect your data. However, no
+        method of transmission over the internet is completely secure, and we
+        cannot guarantee absolute security.
+      </p>
+
+      <h2>Changes to This Policy</h2>
+      <p>
+        We may update this policy from time to time. Changes will be reflected
+        on this page, and we encourage you to review our privacy policy
+        periodically.
+      </p>
+    </section>
+  </main>
+</body>

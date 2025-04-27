@@ -1,0 +1,193 @@
+<style>
+  :root {
+    --deep-teal: #006d77; /* Deep teal */
+    --rich-gold: #ffc107; /* Rich gold for hover effects */
+    --dark-gold: #e6a700; /* Slightly darker gold */
+    --light-gray: #f7f7f7; /* Light gray for background */
+    --dark-gray: #333333; /* Dark gray for text */
+    --white: #ffffff; /* Standard white */
+    --footer-gray: #343a40; /* Subtle footer gray */
+  }
+
+  body {
+    font-family: "Plus Jakarta Sans", serif;
+    margin: 0;
+    padding: 0;
+    background: var(--light-gray); /* Light gray background */
+  }
+
+  .contact-us-container {
+    padding: 2rem;
+    background-color: var(--light-gray); /* Light gray container background */
+  }
+
+  .contact-header {
+    text-align: center;
+    background: var(--deep-teal); /* Deep teal for header background */
+    color: var(--white); /* White text for header */
+    padding: 2rem;
+    border-bottom: 1px solid var(--footer-gray); /* Subtle footer gray for border */
+  }
+
+  .contact-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact-info {
+    text-align: center;
+    padding: 2rem 0;
+  }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .info-card {
+    padding: 1rem;
+    border: 1px solid var(--footer-gray); /* Subtle footer gray for borders */
+    border-radius: 10px;
+    background: var(--white); /* White background for cards */
+  }
+
+  .info-card i {
+    font-size: 2rem;
+    color: var(--deep-teal); /* Deep teal for icons */
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-form-section {
+    text-align: center;
+    padding: 2rem 0;
+  }
+
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .form-group {
+    text-align: left;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--dark-gray); /* Dark gray for labels */
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--footer-gray); /* Subtle gray border */
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+
+  .submit-button {
+    background: var(--deep-teal); /* Deep teal for button */
+    color: var(--white); /* White text for button */
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  .submit-button:hover {
+    background: var(--rich-gold); /* Rich gold for hover */
+    color: var(--dark-gray); /* Dark text on hover for contrast */
+  }
+</style>
+<%layout("/layouts/boilerplate.ejs")-%>
+<body>
+  <main class="contact-us-container">
+    <!-- Header Section -->
+    <section class="contact-header">
+      <h1>Contact Us</h1>
+      <p>
+        We're here to help! Whether you have questions, feedback, or just want
+        to say hello, feel free to reach out to us.
+      </p>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="contact-info">
+      <h2>Get in Touch</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <i class="fas fa-phone"></i>
+          <h3>Call Us</h3>
+          <p>+91-123-456-7890</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-envelope"></i>
+          <h3>Email Us</h3>
+          <p>dreamdwell0125@gmail.com</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h3>Visit Us</h3>
+          <p>DreamDwell HQ, Srinagar, Jammu & Kashmir, India</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form-section">
+      <h2>Send Us a Message</h2>
+      <p>
+        Fill out the form below, and we’ll get back to you as soon as possible!
+      </p>
+      <form action="/contact" method="POST" class="contact-form">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="Enter the subject"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="Write your message here"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="submit-button">Send Message</button>
+      </form>
+    </section>
+  </main>
+</body>

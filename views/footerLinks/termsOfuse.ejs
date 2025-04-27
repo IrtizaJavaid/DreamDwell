@@ -1,0 +1,144 @@
+<style>
+  :root {
+    --deep-teal: #006d77; /* The deep teal color */
+    --rich-gold: #ffc107; /* Gold for hover effects */
+    --dark-gold: #e6a700; /* Slightly darker gold */
+    --light-gray: #f7f7f7; /* Light gray background */
+    --dark-gray: #333333; /* Dark gray for readability */
+    --footer-gray: #343a40; /* Subtle gray for emphasis */
+    --white: #ffffff; /* Standard white */
+    --hover-red: #e60023; /* Subtle red for delete action */
+  }
+
+  body {
+    font-family: "Plus Jakarta Sans", serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: var(--light-gray); /* Use light gray */
+  }
+
+  .terms-container {
+    padding: 2rem;
+    background-color: var(--light-gray); /* Use light gray */
+  }
+
+  .terms-header {
+    text-align: center;
+    background: var(--deep-teal); /* Use deep teal */
+    color: var(--white); /* Use white text */
+    padding: 2rem;
+    border-radius: 8px;
+  }
+
+  .terms-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .terms-header p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+  }
+
+  .terms-content {
+    padding: 2rem 0;
+  }
+
+  .terms-content h2 {
+    color: var(--deep-teal); /* Use deep teal for headings */
+    margin-top: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .terms-content ul {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+    list-style: square; /* Keep square bullets */
+  }
+
+  .terms-content ul li {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  .terms-content p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .terms-content p em {
+    color: var(--footer-gray); /* Use footer gray for emphasis */
+  }
+</style>
+<%layout("/layouts/boilerplate.ejs")-%>
+<body>
+  <main class="terms-container">
+    <section class="terms-header">
+      <h1>Terms of Use</h1>
+      <p>
+        Welcome to DreamDwell! By using our platform, you agree to the following
+        terms and conditions. Please read them carefully.
+      </p>
+    </section>
+
+    <section class="terms-content">
+      <h2>Account Responsibilities</h2>
+      <ul>
+        <li>
+          Users must provide accurate information during account registration.
+        </li>
+        <li>
+          Keep your account credentials secure. You are responsible for all
+          activities under your account.
+        </li>
+        <li>
+          Notify us immediately in case of unauthorized access or security
+          breaches.
+        </li>
+      </ul>
+
+      <h2>Platform Usage</h2>
+      <ul>
+        <li>
+          You may only use DreamDwell for lawful purposes and in compliance with
+          our policies.
+        </li>
+        <li>
+          Do not post or share content that is fraudulent, harmful, or infringes
+          on intellectual property rights.
+        </li>
+        <li>
+          DreamDwell reserves the right to suspend or terminate accounts
+          violating these terms.
+        </li>
+      </ul>
+
+      <h2>Property Listings</h2>
+      <ul>
+        <li>
+          DreamDwell is a platform connecting users to property listings. We do
+          not guarantee the accuracy of listing details.
+        </li>
+        <li>
+          Users are responsible for conducting due diligence when selecting
+          properties or renting spaces.
+        </li>
+      </ul>
+
+      <h2>Limitation of Liability</h2>
+      <p>
+        DreamDwell is not liable for any indirect, incidental, or consequential
+        damages arising from the use of our platform. Our liability is limited
+        to the maximum extent permitted by law.
+      </p>
+
+      <h2>Changes to These Terms</h2>
+      <p>
+        We may modify these terms from time to time. Continued use of our
+        platform constitutes acceptance of the updated terms.
+      </p>
+    </section>
+  </main>
+</body>
