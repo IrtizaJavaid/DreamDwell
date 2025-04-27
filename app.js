@@ -8,7 +8,7 @@ const path = require("path");
 const Listing = require("./models/listing.js"); // Only require Listing model once
 const methodOverride = require("method-override");
 const ejsMate = require("ejs-mate"); //
-const ExpressError = require("./utils/expressErr.js"); //for error handling
+const ExpressError = require("./utils/ExpressErr.js"); //for error handling
 
 const bodyParser = require("body-parser"); //
 const listingsRouter = require("./Routes/listing.js");

@@ -1,6 +1,6 @@
 const Listing = require("./models/listing");
 const Review = require("./models/review");
-const ExpressError = require("./utils/ExpressErr");
+const ExpressError = require("./utils/ExpressErr.js");
 const { listingSchema, reviewSchema, bookingSchema } = require("./schema.js");
 
 //validation listingschema to covert joi_code to function

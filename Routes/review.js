@@ -3,7 +3,7 @@ const { route } = require("./listing");
 //creating router object
 const router = express.Router({ mergeParams: true });
 const wrapAsync = require("../utils/wrapAsync");
-const ExpressError = require("../utils/ExpressErr");
+const ExpressError = require("../utils/ExpressErr.js");
 const Reviewcontroller = require("../controllers/review");
 
 const Review = require("../models/review.js");
