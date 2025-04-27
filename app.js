@@ -99,6 +99,11 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
+// Redirect root route `/` to `/listings`
+app.get("/", (req, res) => {
+  res.redirect("/listings");
+});
+
 //using routes for listings and reviews and user by using middleware app.use and passing the route file
 app.use("/listings", listingsRouter);
 app.use("/listings/:id/reviews", reviewsRouter);
